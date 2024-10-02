@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class PlacementIndicator : MonoBehaviour
     [SerializeField] private GameObject objectToPlace;
     private Pose placementPose;
     private bool placementValid = false;
+
+    public Action<Vector3> onPlacementSelected;
     
     void Update()
     {
@@ -51,7 +54,9 @@ public class PlacementIndicator : MonoBehaviour
     {
         if (placementValid)
         {
-            Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+            //Instantiate(objectToPlace, placementPose.position, placementPose.rotation);
+            // onPlacementSelected?.Invoke(placementPose.position);
+            GlobalEventSystem.Instance.TriggerEvent(GameEvent.OnPlacementSelected, placementPose.position);
         }
     }
 }
