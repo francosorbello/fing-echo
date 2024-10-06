@@ -14,6 +14,13 @@ public class TabGroup : MonoBehaviour
     
     private TabButton selectedTab;
     private int index;
+
+    private void Start()
+    {
+        ResetTabs();
+        OnTabSelected(tabButtons[1]);
+    }
+
     public void Suscribe(TabButton button)
     {
         if (tabButtons == null)

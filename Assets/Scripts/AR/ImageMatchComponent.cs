@@ -9,7 +9,7 @@ public class ImageMatchComponent : MonoBehaviour
     [SerializeField] private ARTrackedImageManager aRTrackedImageManager; 
     [SerializeField] private List<POIData> poiDataList;
 
-    public Action<POIData, Vector3> onImageMatched;
+    public Action<POIData> onImageMatched;
 
     void OnEnable()
     {
@@ -54,7 +54,7 @@ public class ImageMatchComponent : MonoBehaviour
                 {
                     if (trackedImage.referenceImage.name == poiData.arName)
                     {
-                        onImageMatched?.Invoke(poiData, trackedImage.transform.position);
+                        onImageMatched?.Invoke(poiData);
                     }
                 }
             }

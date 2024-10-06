@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arName: Fountain
   poiID: 1f77ea30-4afb-49d9-aeb7-4a8f0caa1f0b
+  description: "Se encuentra en frente del edificio de gobierno.\n\xDAtil como punto
+    de encuentro con otras personas."
+  notableFacts: 

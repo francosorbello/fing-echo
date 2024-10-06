@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,8 @@ public class PointOfInterestUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI titleText;
     [SerializeField] MessageManager messageManager;
     [SerializeField] InfoManager infoManager;
+
+    public Action onAddMessage;
 
     public void SetTitle(string title)
     {
@@ -27,5 +30,10 @@ public class PointOfInterestUI : MonoBehaviour
     public void SetInfo(string info)
     {
         infoManager.SetInfo(info);
+    }
+
+    public void OnAddMessage()
+    {
+        onAddMessage?.Invoke();
     }
 }

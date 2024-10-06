@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MockupImageEntry : ScriptableObject 
+[Serializable]
+public class MockupImageEntry 
 {
     public string poiID;
     public string title;
