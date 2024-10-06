@@ -36,7 +36,6 @@ public class MVCDatabase<T>
         {
             if (item.GetType().GetProperty("poiID").GetValue(item).ToString() == poiID)
             {
-                // Debug.Log(item.GetType().GetProperty("message").GetValue(item));
                 dataToReturn.Add(item);
             }
         }

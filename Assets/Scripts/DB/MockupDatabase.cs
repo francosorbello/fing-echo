@@ -2,13 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MockupDatabase : MVCDatabase<MessageModel>
+[CreateAssetMenu(fileName = "MockupDatabase", menuName = "ScriptableObjects/MockupDatabase", order = 1)]
+public class MockupDatabase : ScriptableObject
 {
-    public MockupDatabase()
+    public List<MockupImageEntry> imageEntries;
+
+    public List<MockupMessage> GetFromPOI(string poiID)
     {
-        for (int i = 0; i < 10; i++)
+        List<MockupMessage> messages = new List<MockupMessage>();
+        foreach (MockupImageEntry entry in imageEntries)
         {
-            this.AddData(new MessageModel("Hello World", System.Guid.NewGuid().ToString()));
+            if (entry.poiID == poiID)
+            {
+                messages.AddRange(entry.messages);
+            }
         }
+        return messages;
     }
 }
