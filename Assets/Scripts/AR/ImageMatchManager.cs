@@ -7,13 +7,35 @@ public class ImageMatchManager : MonoBehaviour
     [SerializeField] private MockupDatabase mockupDatabase;
     [SerializeField] private ImageMatchComponent imageMatchComponent;
     [SerializeField] private PointOfInterestUI pointOfInterestUI;
+    [SerializeField] private AddMessagePopUp addMessagePopUp;
+
+    private POIData currentPOI;
+
     private void Start()
     {
         imageMatchComponent.onImageMatched += OnImageMatch;
+        addMessagePopUp.onMessageSend += OnMessageSend;
+        pointOfInterestUI.onClose += OnClose;
+    }
+
+    private void OnClose()
+    {
+        currentPOI = null;
+        pointOfInterestUI.ClearMessages();
+        imageMatchComponent.ToggleScan(true);
+    }
+
+    private void OnMessageSend(string message)
+    {
+        if (currentPOI == null)
+            return;
+        mockupDatabase.AddMessage(currentPOI.poiID, new MockupMessage { message = message, poiID = currentPOI.poiID });
+        pointOfInterestUI.ShowMessage(message);
     }
 
     private void OnImageMatch(POIData poiID)
     {
+        pointOfInterestUI.gameObject.SetActive(true);
         pointOfInterestUI.SetTitle(poiID.arName);
         pointOfInterestUI.SetInfo(poiID.description);
         List<MockupMessage> messages = mockupDatabase.GetFromPOI(poiID.poiID);
@@ -21,5 +43,7 @@ public class ImageMatchManager : MonoBehaviour
         {
             pointOfInterestUI.ShowMessage(msg.message);
         }
+        currentPOI = poiID;
+        imageMatchComponent.ToggleScan(false);
     }
 }

@@ -12,11 +12,26 @@ public class MockupDatabase : ScriptableObject
         List<MockupMessage> messages = new List<MockupMessage>();
         foreach (MockupImageEntry entry in imageEntries)
         {
-            if (entry.poiID == poiID)
+            if (entry.poiID == poiID && entry.messages != null)
             {
                 messages.AddRange(entry.messages);
             }
         }
         return messages;
+    }
+
+    public void AddMessage(string poiID, MockupMessage message)
+    {
+        foreach (MockupImageEntry entry in imageEntries)
+        {
+            if (entry.poiID == poiID)
+            {
+                if (entry.messages == null)
+                {
+                    entry.messages = new List<MockupMessage>();
+                }
+                entry.messages.Add(message);
+            }
+        }
     }
 }

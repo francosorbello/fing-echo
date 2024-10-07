@@ -11,4 +11,9 @@ public class InfoManager : MonoBehaviour
     {
         infoText.text = info;
     }
+
+    public void ClearInfo()
+    {
+        infoText.text = "";
+    }
 }

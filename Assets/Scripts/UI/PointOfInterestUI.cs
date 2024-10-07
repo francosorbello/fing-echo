@@ -11,6 +11,7 @@ public class PointOfInterestUI : MonoBehaviour
     [SerializeField] InfoManager infoManager;
 
     public Action onAddMessage;
+    public Action onClose;
 
     public void SetTitle(string title)
     {
@@ -27,6 +28,11 @@ public class PointOfInterestUI : MonoBehaviour
         messageManager.ClearMessages();
     }
 
+    public void ClearInfo()
+    {
+        infoManager.ClearInfo();
+    }	
+
     public void SetInfo(string info)
     {
         infoManager.SetInfo(info);
@@ -34,6 +40,14 @@ public class PointOfInterestUI : MonoBehaviour
 
     public void OnAddMessage()
     {
+        Debug.Log("on add message invoke");
         onAddMessage?.Invoke();
+    }
+
+    public void Close()
+    {
+        ClearMessages();
+        gameObject.SetActive(false);
+        onClose?.Invoke();
     }
 }

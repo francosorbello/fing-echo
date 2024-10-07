@@ -18,7 +18,13 @@ public class TabGroup : MonoBehaviour
     private void Start()
     {
         ResetTabs();
-        OnTabSelected(tabButtons[1]);
+        StartCoroutine(SelectFirst());
+    }
+
+    private IEnumerator SelectFirst()
+    {
+        yield return new WaitForSeconds(0.1f);
+        OnTabSelected(tabButtons[0]);
     }
 
     public void Suscribe(TabButton button)
