@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
@@ -40,14 +41,18 @@ public class PointOfInterestUI : MonoBehaviour
 
     public void OnAddMessage()
     {
-        Debug.Log("on add message invoke");
         onAddMessage?.Invoke();
+    }
+
+    public void Show()
+    {
+        gameObject.SetActive(true);
     }
 
     public void Close()
     {
         ClearMessages();
-        gameObject.SetActive(false);
+        // gameObject.SetActive(false);
         onClose?.Invoke();
     }
 }

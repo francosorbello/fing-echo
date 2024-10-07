@@ -33,7 +33,7 @@ public class ImageMatchManager : MonoBehaviour
         pointOfInterestUI.ShowMessage(message);
     }
 
-    private void OnImageMatch(POIData poiID)
+    private void OnImageMatch(POIData poiID, Vector3 position)
     {
         pointOfInterestUI.gameObject.SetActive(true);
         pointOfInterestUI.SetTitle(poiID.arName);
