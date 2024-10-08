@@ -47,3 +47,4 @@ MonoBehaviour:
   aRTrackedImageManager: {fileID: 0}
   poiDataList:
   - {fileID: 11400000, guid: 54b03d3a8e7f88a4eaec04e82ee2444b, type: 2}
+  - {fileID: 11400000, guid: b161f2378a652b2449d948da65e20b8f, type: 2}

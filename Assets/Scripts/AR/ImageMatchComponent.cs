@@ -10,7 +10,9 @@ public class ImageMatchComponent : MonoBehaviour
     [SerializeField] private List<POIData> poiDataList;
 
     public Action<POIData, Vector3> onImageMatched;
+    public Action onImageLost;
     private bool doScan = true;
+    private ARTrackedImage previousImage;
 
     void OnEnable()
     {
@@ -74,9 +76,21 @@ public class ImageMatchComponent : MonoBehaviour
                 {
                     if (trackedImage.referenceImage.name == poiData.arName)
                     {
+                        if (previousImage != null && previousImage == trackedImage)
+                            continue;
+                        previousImage = trackedImage;
                         onImageMatched?.Invoke(poiData,trackedImage.transform.position);
                     }
                 }
+            }
+        }
+        if (previousImage != null)
+        { 
+            var prevInCameraView = IsInCameraView(previousImage);
+            if (!prevInCameraView)
+            {
+                onImageLost?.Invoke();
+                previousImage = null;
             }
         }
     }

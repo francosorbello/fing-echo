@@ -16,4 +16,9 @@ public class InfoManager : MonoBehaviour
     {
         infoText.text = "";
     }
+
+    public void SetHyperLink(string link)
+    {
+        GetComponentInChildren<HyperLinkButton>().SetHyperLink(link);
+    }
 }

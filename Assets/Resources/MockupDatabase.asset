@@ -15,3 +15,11 @@ MonoBehaviour:
   imageEntries:
   - poiID: 1f77ea30-4afb-49d9-aeb7-4a8f0caa1f0b
     title: Fountain
+    messages: []
+  - poiID: 8e8823e7-e911-4fb9-a1ca-29ead361928d
+    title: Edificio de Gobierno
+    messages:
+    - message: La biblioteca es un gran lugar para estudiar
+      poiID: 8e8823e7-e911-4fb9-a1ca-29ead361928d
+    - message: "Las salas de computaci\xF3n estan en el piso de arriba"
+      poiID: 8e8823e7-e911-4fb9-a1ca-29ead361928d

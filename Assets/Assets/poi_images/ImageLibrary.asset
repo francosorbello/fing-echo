@@ -25,5 +25,15 @@ MonoBehaviour:
       m_GuidHigh: 12909821725384532264
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Fountain
+    m_Name: Fuente
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5460302265162050261
+      m_GuidHigh: 4439911330736773782
+    m_SerializedTextureGuid:
+      m_GuidLow: 15574638427384309598
+      m_GuidHigh: 5612497429685860152
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Edificio de Gobierno
     m_Texture: {fileID: 0}

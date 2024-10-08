@@ -39,6 +39,11 @@ public class PointOfInterestUI : MonoBehaviour
         infoManager.SetInfo(info);
     }
 
+    public void SetHyperLink(string link)
+    {
+        infoManager.SetHyperLink(link);
+    }
+
     public void OnAddMessage()
     {
         onAddMessage?.Invoke();
@@ -52,7 +57,7 @@ public class PointOfInterestUI : MonoBehaviour
     public void Close()
     {
         ClearMessages();
-        // gameObject.SetActive(false);
+        gameObject.SetActive(false);
         onClose?.Invoke();
     }
 }
