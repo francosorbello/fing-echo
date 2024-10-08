@@ -52,7 +52,7 @@ public class PointOfInterestUI : MonoBehaviour
     public void Close()
     {
         ClearMessages();
-        // gameObject.SetActive(false);
+        gameObject.SetActive(false);
         onClose?.Invoke();
     }
 }

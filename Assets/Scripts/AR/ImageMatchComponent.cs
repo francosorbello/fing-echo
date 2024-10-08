@@ -11,6 +11,7 @@ public class ImageMatchComponent : MonoBehaviour
 
     public Action<POIData, Vector3> onImageMatched;
     private bool doScan = true;
+    private ARTrackedImage previousImage;
 
     void OnEnable()
     {
@@ -74,6 +75,9 @@ public class ImageMatchComponent : MonoBehaviour
                 {
                     if (trackedImage.referenceImage.name == poiData.arName)
                     {
+                        if (previousImage != null && previousImage == trackedImage)
+                            return;
+                        previousImage = trackedImage;
                         onImageMatched?.Invoke(poiData,trackedImage.transform.position);
                     }
                 }

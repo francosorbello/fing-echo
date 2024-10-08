@@ -8,6 +8,7 @@ public class ImageMatchManager : MonoBehaviour
     [SerializeField] private ImageMatchComponent imageMatchComponent;
     [SerializeField] private PointOfInterestUI pointOfInterestUI;
     [SerializeField] private AddMessagePopUp addMessagePopUp;
+    [SerializeField] private POILabel poiLabel;
 
     private POIData currentPOI;
 
@@ -35,7 +36,11 @@ public class ImageMatchManager : MonoBehaviour
 
     private void OnImageMatch(POIData poiID, Vector3 position)
     {
-        pointOfInterestUI.gameObject.SetActive(true);
+        // pointOfInterestUI.gameObject.SetActive(true);
+        
+        var poilblInstance = Instantiate(poiLabel, position, Quaternion.identity);
+        poilblInstance.SetText(poiID.arName);
+
         pointOfInterestUI.SetTitle(poiID.arName);
         pointOfInterestUI.SetInfo(poiID.description);
         List<MockupMessage> messages = mockupDatabase.GetFromPOI(poiID.poiID);
@@ -46,4 +51,6 @@ public class ImageMatchManager : MonoBehaviour
         currentPOI = poiID;
         imageMatchComponent.ToggleScan(false);
     }
+
+
 }
