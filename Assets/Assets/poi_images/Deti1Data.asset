@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc309c1b4bf499499e58c9edfe26159, type: 3}
+  m_Name: Deti1Data
+  m_EditorClassIdentifier: 
+  arName: DETI I
+  poiID: 95f74198-0874-4667-a4f1-964ed28dd39c
+  description: "Los laboratorios se encuentran aqu\xED."
+  notableFacts: 
+  mapLink: https://maps.app.goo.gl/yTdsnNUCxzb3viyD9
+  imageTex: {fileID: 2800000, guid: 2dd2e3b728cc4864499753b28f2d8418, type: 3}

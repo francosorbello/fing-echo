@@ -48,3 +48,6 @@ MonoBehaviour:
   poiDataList:
   - {fileID: 11400000, guid: 54b03d3a8e7f88a4eaec04e82ee2444b, type: 2}
   - {fileID: 11400000, guid: b161f2378a652b2449d948da65e20b8f, type: 2}
+  - {fileID: 11400000, guid: cb7583f59b5737c4cb7e881e2cea928a, type: 2}
+  - {fileID: 11400000, guid: ae0977c539cc55548a91db4eb53fcd56, type: 2}
+  - {fileID: 11400000, guid: 6981e71fb0d70574d8639b7a05a208b1, type: 2}

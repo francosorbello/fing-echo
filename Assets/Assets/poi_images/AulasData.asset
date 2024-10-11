@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc309c1b4bf499499e58c9edfe26159, type: 3}
+  m_Name: AulasData
+  m_EditorClassIdentifier: 
+  arName: Edificio de Aulas
+  poiID: 2d965a99-d67f-4729-b24d-e6ec15a9df83
+  description: "Contiene la mayor\xEDa de las aulas, adem\xE1s del estacionamiento."
+  notableFacts: 
+  mapLink: https://maps.app.goo.gl/QAi1YcqJcxwMuDPeA
+  imageTex: {fileID: 2800000, guid: 051aa0163b9f65b4ba6762bfdd29e70f, type: 3}

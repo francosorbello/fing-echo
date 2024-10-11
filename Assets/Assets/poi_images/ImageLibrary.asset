@@ -37,3 +37,33 @@ MonoBehaviour:
     m_SpecifySize: 0
     m_Name: Edificio de Gobierno
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5571248333879528560
+      m_GuidHigh: 15487019403083079835
+    m_SerializedTextureGuid:
+      m_GuidLow: 7328548047810109462
+      m_GuidHigh: 1145930662564489146
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Edificio de Aulas
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5204148236568136975
+      m_GuidHigh: 6869376400588824248
+    m_SerializedTextureGuid:
+      m_GuidLow: 5216339125809111991
+      m_GuidHigh: 1766587049031472969
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: DETI I
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4624168045451230786
+      m_GuidHigh: 12461059473166259379
+    m_SerializedTextureGuid:
+      m_GuidLow: 14773072178744105052
+      m_GuidHigh: 18288367754683215672
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: DETI II
+    m_Texture: {fileID: 0}
