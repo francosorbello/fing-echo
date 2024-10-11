@@ -10,5 +10,7 @@ public class POIData : ScriptableObject
     [SerializeField,Multiline] public string description;
     [SerializeField,Multiline] public string notableFacts;
     [SerializeField] public string mapLink;
+
+    [SerializeField] public Texture2D imageTex;
     
 }

@@ -21,4 +21,9 @@ public class InfoManager : MonoBehaviour
     {
         GetComponentInChildren<HyperLinkButton>().SetHyperLink(link);
     }
+
+    public void SetImage(Texture2D imageTex)
+    {
+        GetComponentInChildren<RawImageToSpriteComponent>().SetImage(imageTex);
+    }
 }

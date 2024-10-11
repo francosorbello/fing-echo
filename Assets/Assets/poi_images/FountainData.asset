@@ -18,3 +18,4 @@ MonoBehaviour:
     de encuentro con otras personas."
   notableFacts: 
   mapLink: https://maps.app.goo.gl/rFWoRJyWKkAYV6dWA
+  imageTex: {fileID: 2800000, guid: 7631d78b2db01ba428612ac775e628b3, type: 3}

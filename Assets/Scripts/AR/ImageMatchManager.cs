@@ -46,6 +46,8 @@ public class ImageMatchManager : MonoBehaviour
         pointOfInterestUI.SetTitle(poiID.arName);
         pointOfInterestUI.SetInfo(poiID.description);
         pointOfInterestUI.SetHyperLink(poiID.mapLink);
+        pointOfInterestUI.SetImage(poiID.imageTex);
+        
         List<MockupMessage> messages = mockupDatabase.GetFromPOI(poiID.poiID);
         foreach (var msg in messages)
         {

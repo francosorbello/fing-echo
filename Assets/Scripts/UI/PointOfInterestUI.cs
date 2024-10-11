@@ -44,6 +44,11 @@ public class PointOfInterestUI : MonoBehaviour
         infoManager.SetHyperLink(link);
     }
 
+    public void SetImage(Texture2D texture)
+    {
+        infoManager.SetImage(texture);
+    }
+
     public void OnAddMessage()
     {
         onAddMessage?.Invoke();

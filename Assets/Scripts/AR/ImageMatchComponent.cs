@@ -77,11 +77,7 @@ public class ImageMatchComponent : MonoBehaviour
                     if (trackedImage.referenceImage.name == poiData.arName)
                     {
                         if (previousImage != null && previousImage == trackedImage)
-<<<<<<< HEAD
                             continue;
-=======
-                            return;
->>>>>>> 9d5dd3dc109a7f7b29c128bfbca0071a8ca8e09d
                         previousImage = trackedImage;
                         onImageMatched?.Invoke(poiData,trackedImage.transform.position);
                     }
